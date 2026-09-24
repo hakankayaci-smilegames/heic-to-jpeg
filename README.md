@@ -1,63 +1,85 @@
 # HEIC & Media Tools Pro 📸🗜️
 
-> **Ultra High Quality HEIC Converter & Smart Image Compressor**  
-> *Apple Display P3 ICC Profili, EXIF koruma ve 4:4:4 Chroma Subsampling destekli kayıpsız dönüştürücü + Akıllı görsel boyut optimize edici.*
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python: 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen.svg)](#-stand-alone-executables-no-python-required)
+
+> **Ultra High-Quality HEIC Converter & Smart Image Compressor**  
+> Preserves Apple Display P3 ICC Profiles, retains EXIF metadata, and prevents color bleed with 4:4:4 Chroma Subsampling. Features a modern dark-themed GUI and cross-platform CLI.
 
 ---
 
-## 🌟 2 Güçlü Araç Bir Arada / Two Powerful Tools in One
+## 📸 Preview
 
-### 1. 🔄 Format Dönüştürücü (Converter)
-- **Sıfır Renk Kaybı:** iPhone fotoğraflarının geniş gamutlu **Apple Display P3** renk profilini korur; renklerin solmasını önler.
-- **4:4:4 Chroma Subsampling:** Kırmızı ve mavi renk kenarlarındaki sıkıştırma bulanıklığını tamamen sıfırlar.
-- **Dinamik Çıktı:** **JPG**, **JPEG** (kalite ayarlı) veya tamamen kayıpsız (lossless) **PNG** desteği.
-- **EXIF Metadata:** Çekim açısı (orientation) ve kamera bilgileri eksiksiz aktarılır.
-
-### 2. 🗜️ Boyut Optimize Edici (Image Compressor)
-- **Geniş Format Desteği:** HEIC, JPG, JPEG, PNG, WEBP dosyalarını optimize eder.
-- **Canlı Tradeoff Göstergesi:**
-  - 🟢 **Hafif Sıkıştırma (%85-%95):** Görsel fark yok, %100 keskinlik (~%20-%35 tasarruf).
-  - 🟡 **Dengeli Sıkıştırma (%70-%84):** Web ve paylaşım için ideal, fark algılanmaz (~%40-%60 tasarruf).
-  - 🔴 **Agresif Sıkıştırma (%50-%69):** Maksimum tasarruf (~%70-%80 tasarruf).
-- **Detaylı Tasarruf Raporu:** İşlem bitiminde kazanılan toplam megabayt ve tasarruf yüzdesini gösterir.
+<p align="center">
+  <img src="assets/preview.png" alt="Lossless HEIC Converter Tab" width="48%" />
+  <img src="assets/preview2.png" alt="Media Size Optimizer Tab" width="48%" />
+</p>
+<p align="center">
+  <em><b>Left:</b> Lossless Format Converter &nbsp; | &nbsp; <b>Right:</b> Smart Media Size Optimizer</em>
+</p>
 
 ---
 
-## 📦 Kurulumsuz Kullanım (Tek Tıkla İndir & Aç)
+## 🌟 Key Features
 
-Python kurmanıza veya terminal kullanmanıza **gerek yoktur**.  
-👉 [GitHub Releases](https://github.com/KULLANICI_ADINIZ/heic-to-jpeg/releases) sayfasına gidin:
-- **Windows:** `HEIC-Tools-Windows.zip` indirin, içindeki `HEIC-Tools.exe`ye çift tıklayın.
-- **Linux:** `HEIC-Tools-Linux` indirin, çift tıklayıp çalıştırın.
-- **macOS:** `HEIC-Tools-macOS.zip` indirin ve `.app` uygulamasını açın.
+### 1. 🔄 Lossless HEIC Converter
+- **Apple Display P3 Color Gamut:** iPhone HEIC photos are shot in wide Display P3. This tool embeds original ICC profiles to completely eliminate washed-out colors.
+- **4:4:4 Chroma Subsampling:** Prevents compression blur and fringing on fine red/blue edges by encoding without subsampling (`subsampling=0`).
+- **Target Formats:** Export to **JPG**, **JPEG** (custom quality 50–100%), or genuinely lossless **PNG**.
+- **Full EXIF Preservation:** Keeps camera orientation, shooting date, and metadata intact.
+
+### 2. 🗜️ Smart Media Compressor
+- **Multi-Format Support:** Optimize **HEIC**, **JPG**, **JPEG**, **PNG**, and **WEBP** images.
+- **Real-Time Tradeoff Guide:**
+  - 🟢 **Light (85–95%):** Visually lossless, 100% sharpness retention (~20%–35% size reduction).
+  - 🟡 **Balanced (70–84%):** Ideal for web and sharing, indistinguishable from original (~40%–60% size reduction).
+  - 🔴 **Aggressive (50–69%):** Maximum space savings (~70%–80% size reduction).
+- **Instant Savings Report:** Displays total megabytes saved and exact percentage reduction upon completion.
+
+### 3. ⚡ Core Capabilities
+- **Multi-Threaded Engine:** Utilizes all available CPU cores for lightning-fast batch processing.
+- **Modern GUI (CustomTkinter):** Sleek, responsive, dark-mode native interface.
+- **Bilingual Interface:** Instant real-time language toggle between English and Turkish.
+- **Dual Mode (GUI & CLI):** Run interactively without arguments, or script headlessly via command-line arguments.
 
 ---
 
-## 🛠️ Kaynak Koddan Çalıştırma / Run from Source
+## 📦 Stand-Alone Executables (No Python Required)
 
-### 1. Depoyu Klonlayın
+You do **not** need Python installed. Grab the pre-built single-file binary for your OS directly from [Releases](https://github.com/KULLANICI_ADINIZ/heic-to-jpeg/releases):
+
+| OS | Download | Instructions |
+|---|---|---|
+| **Windows** | `HEIC-Tools-Windows.zip` | Extract and double-click `HEIC-Tools.exe` |
+| **Linux** | `HEIC-Tools-Linux` | `chmod +x HEIC-Tools-Linux` and double-click |
+| **macOS** | `HEIC-Tools-macOS.zip` | Unzip and launch `HEIC-Tools.app` |
+
+---
+
+## 🛠️ Run from Source
+
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/KULLANICI_ADINIZ/heic-to-jpeg.git
 cd heic-to-jpeg
 ```
 
-### 2. Sanal Ortam & Paketler
+### 2. Create Virtual Environment & Install Dependencies
 
-#### Linux (Bash / Zsh):
+#### Linux / macOS:
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate        # Bash / Zsh
+# or: source .venv/bin/activate.fish  # Fish Shell
 pip install -r requirements.txt
 ```
 
-#### Linux (Fish Shell):
-```bash
-python3 -m venv .venv
-source .venv/bin/activate.fish
-pip install -r requirements.txt
-```
-
-> **Linux Notu:** Tkinter eksikse: `sudo apt install python3-tk` (Ubuntu) veya `sudo pacman -S tk` (Arch/CachyOS).
+> **Linux Note (Tkinter):** If you encounter `No module named 'tkinter'`, install the system package:
+> ```bash
+> sudo apt install python3-tk    # Ubuntu / Debian
+> sudo pacman -S tk              # Arch / CachyOS
+> ```
 
 #### Windows:
 ```powershell
@@ -66,16 +88,33 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-### 3. Başlatma
-```bash
-# Arayüzü (GUI) açmak için:
-python main.py
+### 3. Launching
 
-# Komut satırından (CLI) doğrudan dönüştürmek için:
-python main.py foto.heic -f png -o ./cikti/
+#### Graphical Interface (GUI):
+```bash
+python main.py
+```
+
+#### Command-Line Interface (CLI):
+```bash
+# Convert a single file with 98% quality (4:4:4 subsampling)
+python main.py photo.heic -f jpg -q 98
+
+# Batch convert a whole folder to lossless PNG
+python main.py ./photos/ -f png -o ./converted/
+
+# View CLI options
+python main.py --help
 ```
 
 ---
 
-## 📄 Lisans / License
-MIT License. Açık kaynaklı ve ücretsizdir.
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/KULLANICI_ADINIZ/heic-to-jpeg/issues).
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
